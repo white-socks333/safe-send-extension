@@ -1,0 +1,38 @@
+{
+  "name": "Safe Send: Ctrl+Enter Only",
+  "description": "GrokとChatGPTでEnterで改行、Ctrl+Enterで送信を統一する拡張機能です。誤送信を防止し、快適なチャット体験を提供します。",
+  "version": "1.3.0",
+  "manifest_version": 3,
+
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "action": {
+    "default_title": "Safe Send: Ctrl+Enter Only",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://x.ai/*",
+        "https://chat.x.ai/*",
+        "https://grok.com/*",
+        "https://*.grok.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
