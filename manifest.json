@@ -1,6 +1,6 @@
 {
   "name": "Safe Send: Ctrl+Enter Only",
-  "description": "GrokとChatGPTでEnterで改行、Ctrl+Enterで送信を統一する拡張機能です。誤送信を防止し、快適なチャット体験を提供します。",
+  "description": "GrokとChatGPTでEnterで改行、Ctrl+Enterで送信を統一する拡張機能です。誤送信を防止します。",
   "version": "1.3.0",
   "manifest_version": 3,
 
